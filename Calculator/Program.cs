@@ -37,7 +37,7 @@ namespace Calculator
                     }
 
 
-                    
+
 
                     Console.WriteLine("Введите математическое действие (+, -, *, /):");
                     mathAct = Console.ReadLine();
@@ -45,21 +45,18 @@ namespace Calculator
                     switch (mathAct)
                     {
                         case "+":
-                            int sum;
-                            sum = firstValue + secondValue;
-                            Console.WriteLine($"Сумма {firstValue} и {secondValue} = {sum}");
+
+                            Console.WriteLine($"Сумма {firstValue} и {secondValue} = " + Addition(firstValue, secondValue));
                             break;
 
                         case "-":
-                            int diff;
-                            diff = firstValue - secondValue;
-                            Console.WriteLine($"Разность {firstValue} и {secondValue} = {diff}");
+
+                            Console.WriteLine($"Разность {firstValue} и {secondValue} = " + Subtraction(firstValue, secondValue));
                             break;
 
                         case "*":
-                            int prod;
-                            prod = firstValue * secondValue;
-                            Console.WriteLine($"Произведение {firstValue} и {secondValue} = {prod}");
+
+                            Console.WriteLine($"Произведение {firstValue} и {secondValue} = " + Multiplication(firstValue, secondValue));
                             break;
 
                         case "/":
@@ -69,9 +66,7 @@ namespace Calculator
                             }
                             else
                             {
-                                int quot;
-                                quot = firstValue / secondValue;
-                                Console.WriteLine($"Частное {firstValue} и {secondValue} = {quot}");
+                                Console.WriteLine($"Частное {firstValue} и {secondValue} = " + Division(firstValue, secondValue));
                             }
                             break;
 
@@ -83,6 +78,30 @@ namespace Calculator
                     Console.ReadLine();
                 }
             }
+        }
+
+        static private int Addition(int firstValue, int secondValue)
+        {
+            int sum = firstValue + secondValue;
+            return sum;
+        }
+
+        static private int Subtraction(int firstValue, int secondValue)
+        {
+            int sub = firstValue - secondValue;
+            return sub;
+        }
+
+        static private int Multiplication(int firstValue, int secondValue)
+        {
+            int prod = firstValue * secondValue;
+            return prod;
+        }
+
+        static private int Division(int firstValue, int secondValue)
+        {
+            int quot = firstValue / secondValue;
+            return quot;
         }
     }
 }
